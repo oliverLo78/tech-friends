@@ -12,7 +12,7 @@ const resolvers = {
       return await Class.find({}).populate('professor');
     },
     professors: async () => {
-      return await Professor.find({});
+      return await Professor.find({}).populate('classes');
     }
   }
 };

@@ -23,6 +23,8 @@ const typeDefs = gql`
     officeHours: String
     officeLocation: String
     studentScore: Float
+    # Add a field that will return an array of Class instances
+    classes: [Class]
   }
 
   type Query {
