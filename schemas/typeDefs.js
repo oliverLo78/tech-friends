@@ -31,6 +31,8 @@ const typeDefs = gql`
     schools: [School]
     classes: [Class]
     professors: [Professor]
+    # Define a query with an ID parameter to return a single Class object
+    class(id: ID!): Class
   }
 `;
 
