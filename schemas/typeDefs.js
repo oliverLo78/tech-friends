@@ -39,6 +39,7 @@ const typeDefs = gql`
   type Mutation {
     # Set the required fields for new schools
     addSchool(name: String!, location: String!, studentCount: Int!): School
+    updateClass(id: ID!, building: String!): Class
   }
 
 `;

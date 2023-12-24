@@ -20,13 +20,22 @@ const resolvers = {
       return await Professor.find({}).populate('classes');
     }
   },
-  
+
   // Define the functions that will fulfill the mutations
   Mutation: {
     addSchool: async (parent, { name, location, studentCount }) => {
       // Create and return the new School object
       return await School.create({ name, location, studentCount });
     },
+    updateClass: async (parent, { id, building }) => {
+      // Find and update the matching class using the destructured argument
+      return await Class.findOneAndUpdate(
+        { _id: id },
+        { building: building },
+        // Return the newly updated object instead of the original
+        { new: true }
+      );
+    }
   },
 };
 
