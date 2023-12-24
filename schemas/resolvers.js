@@ -19,7 +19,15 @@ const resolvers = {
     professors: async () => {
       return await Professor.find({}).populate('classes');
     }
-  }
+  },
+  
+  // Define the functions that will fulfill the mutations
+  Mutation: {
+    addSchool: async (parent, { name, location, studentCount }) => {
+      // Create and return the new School object
+      return await School.create({ name, location, studentCount });
+    },
+  },
 };
 
 module.exports = resolvers;

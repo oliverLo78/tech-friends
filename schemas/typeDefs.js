@@ -34,6 +34,13 @@ const typeDefs = gql`
     # Define a query with an ID parameter to return a single Class object
     class(id: ID!): Class
   }
+
+  # Define which mutations the client is allowed to make
+  type Mutation {
+    # Set the required fields for new schools
+    addSchool(name: String!, location: String!, studentCount: Int!): School
+  }
+
 `;
 
 module.exports = typeDefs;
