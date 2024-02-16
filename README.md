@@ -1,2 +1,2 @@
-# apollo-theater
-Users can see the list of reviews in a Movie's page and post delete their own review if they are logged in.
+# Tech Friends
+This app you can add your profile to a list of friends and endorsed skills for your tech friends
